@@ -1,0 +1,2 @@
+API is stand for Application Programming Interfaces
+Interface is like button in application or website that control the flow of the content

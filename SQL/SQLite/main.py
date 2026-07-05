@@ -20,7 +20,7 @@ def create_job(job : schemas.JobCreate, db : Annotated[Session, Depends(get_data
     return db_job
 
 
-@app.get("Jobs/{job_id}", response_model=schemas.JobResponse)
+@app.get("/Jobs/{job_id}", response_model=schemas.JobResponse)
 def read_job(job_id: int, db: Annotated[Session, Depends(get_database)]):
     job = db.query(mymodel.Job).filter(mymodel.Job.id == job_id).first()
     if not job:
